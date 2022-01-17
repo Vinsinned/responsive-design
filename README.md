@@ -1,1 +1,2 @@
 # responsive-design
+This is a clone of the next web, a tech focused magazine which uses media queries to add responsive design to their website. When the display is wider or narrower, the site will adjust accordingly to match the needs of that media query. This project will be in complete HTML and CSS and it will focus on making a responsive web page, along with all of the previous things that I have learned.
