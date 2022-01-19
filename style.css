@@ -68,6 +68,14 @@ table {
   font-family: 'Shentox Medium';
   src: url('./fonts/Shentox\ Medium.ttf');
 }
+@font-face {
+  font-family: 'Trump Soft Pro';
+  src: url('./fonts/TrumpSoftPro-Bold.ttf');
+}
+@font-face {
+  font-family: 'HK Grotesk Bold';
+  src: url('./fonts/HKGrotesk-Bold.ttf');
+}
 
 /* header */
 header {
@@ -230,6 +238,46 @@ nav ul li {
     grid-row: span 3;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2FSpotify-Hifi.jpg&signature=948317eefbed07b0fcebe7527beaa6ec');
 }
+/* popular articles */
+.popularArticles {
+    padding: 4em 0.5rem!important;
+    padding-top: 8em!important;
+}
+.popularHeading {
+    text-align: center;
+    margin-bottom: 4rem!important;
+    color: #a7aab2;
+    font-family: 'Trump Soft Pro', Arial, Helvetica, sans-serif;
+    letter-spacing: .01em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.popularArticles ol {
+    padding: 0 3em;
+    margin: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1.5rem;
+}
+.popularLink {
+    display: flex;
+    align-items: flex-start;
+}
+.trendingIndex {
+    color: #c09;
+    font-family: 'Trump Soft Pro';
+    font-size: 2.375rem;
+}
+.popularTitle {
+    line-height: 1.5;
+    margin-top: -0.25rem;
+    padding: 0 1rem;
+    transition: all .25s ease-in-out;
+    font-family: 'HK Grotesk Bold', sans-serif;
+    font-size: 1.1rem;
+}
 
 @media (max-width:767px) {
     .stories {
@@ -369,6 +417,13 @@ nav ul li {
     }
     header {
         background-color: #fff;
+    }
+    /* popular articles */
+    .popularArticles ol {
+        padding: 0 1em;
+        margin: 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
     }
 }
 @media (min-width: 1025px) {
