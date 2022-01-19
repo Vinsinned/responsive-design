@@ -64,19 +64,28 @@ table {
   font-family: 'Avalon Bold';
   src: url('./fonts/Avalon_Bold.ttf');
 }
+@font-face {
+  font-family: 'Shentox Medium';
+  src: url('./fonts/Shentox\ Medium.ttf');
+}
 
 /* header */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-family: 'Shentox', sans-serif;
     width: 100%;
+    position: sticky;
+    top: 0;
     background-color: #f7f8f8;
+    z-index: 999;
+}
+.smallHeaderLogo {
+    margin-left: 0.5rem;
+    width: 4.125rem;
 }
 .headerLogo {
     width: 4.125rem;
     height: 1.4rem;
+    margin-left: 1rem;
 }
 nav ul {
     display: flex;
@@ -98,10 +107,16 @@ nav ul li {
     display: flex;
     align-items: center;
 }
+.headerMail {
+    color: #cdcfd3;
+    margin-right: 1rem;
+}
 /* main header */
 .mainHeader {
     background-color: #fad832;
     position: sticky;
+    top: 2.625rem;
+    z-index: 9999;
     box-shadow: 0 16px 48px rgb(0 0 0 / 15%);
     padding: 10px 0;
     display: flex;
@@ -120,8 +135,7 @@ nav ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
-    padding: 2% 0;
+    padding: 2% 2rem;
     margin: 2rem 0;
 }
 .headingLogo {
@@ -142,17 +156,17 @@ nav ul li {
     grid-auto-flow: dense;
     padding: 0 2rem;
     height: 632px;
+    position: relative;
 }
 .storiesArticle {
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 }
 .storiesContent {
     display: block;
     background-color: transparent;
     box-sizing: border-box;
     padding: 24px;
-    position: absolute;
-    bottom: 0;
 }
 .stories article {
     color: #fff;
@@ -169,14 +183,26 @@ nav ul li {
     font-family: 'Avalon Bold', sans-serif;
     font-size: 1.25rem;
 }
+.conferenceContent {
+    text-align: center;
+}
+.storiesDate {
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+}
 .storiesButton {
     border: none;
     border-radius: 1.5rem;
     padding: 0 1.5rem;
     background-color: transparent;
+    color: #fff;
+    font-family: 'Shentox Medium', sans-serif;
+    text-transform: uppercase;
     margin-top: 1rem;
+    height: 42px;
     box-shadow: inset 0 0 0 1px #fff;
     line-height: inherit;
+    cursor: pointer;
 }
 /* stories items */
 .mainStory {
@@ -204,3 +230,156 @@ nav ul li {
     grid-row: span 3;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2FSpotify-Hifi.jpg&signature=948317eefbed07b0fcebe7527beaa6ec');
 }
+
+@media (max-width:767px) {
+    .stories {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        padding: 0 0.5rem;
+    }
+    .mainStory {
+        flex: 4;
+        height: 70%;
+        margin-right: 0.15rem;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fwordle.jpeg&signature=89c08d2a6c4d8364db9594abd1741903');
+    }
+    .googleStory {
+        flex: 1;
+        box-sizing: border-box;
+        height: 70%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Ftime-crystals.jpeg&signature=cefd6ecad47425c742b8b55e37a29ac7');
+    }
+    .websiteStory {
+        display: none;
+    }
+    .spotifyStory {
+        display: none;
+    }
+    .storiesConference {
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/home-header_advert-tnw2021-03.jpg');
+        display: block;
+        width: 100%;
+        height: 30%;
+    }
+}
+@media (min-width:768px) {
+    .stories {
+        max-width: 100rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: .5rem;
+        grid-auto-flow: dense;
+        padding: 0 2rem;
+        height: 824px;
+    }
+    .mainStory {
+        grid-column: span 2;
+        grid-row: span 2;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fwordle.jpeg&signature=89c08d2a6c4d8364db9594abd1741903');
+    }
+    .googleStory {
+        grid-column: span 1;
+        grid-row: span 1;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Ftime-crystals.jpeg&signature=cefd6ecad47425c742b8b55e37a29ac7');
+    }
+    .websiteStory {
+        grid-column: span 1;
+        grid-row: span 1;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('http://web.archive.org/web/20220116114919im_/https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fapp_2022-01-14-112007_ainq.jpeg&signature=945d70bd0f9427cda65107e9cd57c4d4');
+    }
+    .storiesConference {
+        grid-column: span 1;
+        grid-row: span 1;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/home-header_advert-tnw2021-03.jpg');
+    }
+    .spotifyStory {
+        grid-column: span 1;
+        grid-row: span 1;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2FSpotify-Hifi.jpg&signature=948317eefbed07b0fcebe7527beaa6ec');
+    }
+}
+@media (min-width: 801px) {
+    .stories {
+        max-width: 100rem;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: .5rem;
+        grid-auto-flow: dense;
+        padding: 0 2rem;
+        height: 632px;
+    }
+    .mainStory {
+        grid-column: span 4;
+        grid-row: span 3;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fwordle.jpeg&signature=89c08d2a6c4d8364db9594abd1741903');
+    }
+    .googleStory {
+        grid-column: span 2;
+        grid-row: span 2;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Ftime-crystals.jpeg&signature=cefd6ecad47425c742b8b55e37a29ac7');
+    }
+    .websiteStory {
+        grid-column: span 2;
+        grid-row: span 2;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('http://web.archive.org/web/20220116114919im_/https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fapp_2022-01-14-112007_ainq.jpeg&signature=945d70bd0f9427cda65107e9cd57c4d4');
+    }
+    .storiesConference {
+        grid-column: span 4;
+        grid-row: span 2;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/home-header_advert-tnw2021-03.jpg');
+    }
+    .spotifyStory {
+        grid-column: span 4;
+        grid-row: span 3;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2FSpotify-Hifi.jpg&signature=948317eefbed07b0fcebe7527beaa6ec');
+    } 
+}
+@media (max-width:1025px) {
+    .mainHeader {
+        display: none;
+    }
+    .mainHeading {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .largeMediaHeader {
+        display: none;
+    }
+    .smallMediaHeader {
+        display: block;
+        display: flex;
+        align-items: center;
+        height: 3.5rem;
+        padding-left: 1rem;
+        font-size: 1.25rem;
+        box-shadow: 0 16px 48px rgb(0 0 0 / 15%);;
+    }
+    .smallMediaHeader * {
+        color: #a7aab2;
+    }
+    header {
+        background-color: #fff;
+    }
+}
+@media (min-width: 1025px) {
+    .largeMediaHeader {
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .smallMediaHeader {
+        display: none;
+    }
+}   
