@@ -595,6 +595,12 @@ nav ul li {
     .smallMediaHeader {
         display: none;
     }
+    /* latest stories */
+    .latestGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
 }   
 @media (min-width:1280px) {
     .latestStories {
