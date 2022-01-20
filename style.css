@@ -76,6 +76,10 @@ table {
   font-family: 'HK Grotesk Bold';
   src: url('./fonts/HKGrotesk-Bold.ttf');
 }
+@font-face {
+  font-family: 'HK Grotesk Medium';
+  src: url('./fonts/HKGrotesk-Medium.ttf');
+}
 
 /* header */
 header {
@@ -318,6 +322,29 @@ nav ul li {
     line-height: 1.5;
     font-size: 1.1rem;
 }
+.allNewsDiv {
+    display: flex;
+    justify-content: center;
+}
+.allNews {
+    cursor: pointer;
+    border: none;
+    height: 3rem;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    padding: 0 1.5rem;
+    background-color: #c09;
+    color: #fff;
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    font-family: 'HK Grotesk Bold', sans-serif;
+    letter-spacing: 0.025rem;
+}
+.allNewsForward {
+    font-size: 0.75rem;
+    color: #ba0b91;
+}
 
 @media (max-width:767px) {
     .stories {
@@ -371,6 +398,14 @@ nav ul li {
     .latestThumbnail {
         width: 25%;
         object-fit: cover;
+    }
+    .allNews {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .allNewsForward {
+        display: none!important;
     }
 }
 @media (min-width:768px) {
