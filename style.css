@@ -278,6 +278,46 @@ nav ul li {
     font-family: 'HK Grotesk Bold', sans-serif;
     font-size: 1.1rem;
 }
+/* latest stories */
+.latestStories {
+    padding: 7rem 2rem;
+    max-width: 80rem;
+}
+.latestHeading {
+    margin-bottom: 4rem!important;
+    font-family: 'Avalon Bold', sans-serif;
+    font-size: 2.5rem!important;
+    letter-spacing: -0.1rem;
+}
+.latestGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+.latestStory {
+    width: 25%;
+}
+.latestThumbnail {
+    width: 100%;
+}
+.latestContext {
+    margin-top: 1rem;
+}
+.latestTag {
+    font-family: 'Shentox Medium', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: .08em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #0cc;
+    margin-bottom: .25rem;
+}
+.latestTitle {
+    font-family: 'HK Grotesk Bold', sans-serif;
+    transition-duration: .15s;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
 
 @media (max-width:767px) {
     .stories {
@@ -312,6 +352,25 @@ nav ul li {
         display: block;
         width: 100%;
         height: 30%;
+    }
+    /* latest stories */
+    .latestGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    .latestStory {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+    .latestContext {
+        margin-left: 1.5rem;
+        line-height: 1.5;
+    }
+    .latestThumbnail {
+        width: 25%;
+        object-fit: cover;
     }
 }
 @media (min-width:768px) {
@@ -349,6 +408,12 @@ nav ul li {
         grid-column: span 1;
         grid-row: span 1;
         background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2FSpotify-Hifi.jpg&signature=948317eefbed07b0fcebe7527beaa6ec');
+    }
+    /* latest stories */
+    .latestGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
     }
 }
 @media (min-width: 801px) {
@@ -438,3 +503,9 @@ nav ul li {
         display: none;
     }
 }   
+@media (min-width:1280px) {
+    .latestStories {
+        margin: auto;
+        max-width: 80rem;
+    }
+}
