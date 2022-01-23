@@ -609,6 +609,72 @@ nav ul li {
     height: 100%;
     opacity: 0.5;
 }
+/* footer */
+footer {
+    padding: 4rem 0;
+    background-color: #000;
+    color: #fff;
+}
+footer a {
+    color: #0cc;
+    text-decoration: none;
+    font-family: 'HK Grotesk', sans-serif;
+    line-height: 1.75;
+}
+.mainFooter {
+    padding: 0 4rem;
+    border: 0.75rem solid transparent;
+}
+.footerLogo {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+.footerTagline {
+    font-family: 'HK Grotesk', sans-serif;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.footerShareLinks {
+    margin-bottom: .5rem;
+}
+.footerShareOption {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+}
+.footerLinks {
+    padding: 0 4rem;
+    display: flex;
+}
+.footerHeading {
+    font-family: 'Trump Soft Pro', sans-serif;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+}
+.moreTNW {
+    width: 50%;
+}
+.aboutTNW {
+    width: 50%;
+}
+.footerCopyrightDiv {
+    font-family: 'HK Grotesk', sans-serif;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #505666;
+    color: #a7aab2;
+    font-size: .875rem;
+    line-height: 1.75;
+    text-align: center;
+}
+.footerBold {
+    font-family: 'HK Grotesk Bold', sans-serif;
+    color: #fff;
+}
 
 @media (max-width:767px) {
     .stories {
@@ -776,6 +842,18 @@ nav ul li {
         flex-basis: 50%;
         max-width: 50%;
         box-sizing: border-box;
+    }
+    /* footer */
+    .mainFooter {
+        padding: 0 1.5rem;
+        border-width: 1px;
+    }
+    .footerLinks {
+        padding: 0 1.5rem;
+    }
+    .footerCopyrightDiv {
+        padding: 0 1.5rem;
+        padding-top: 2rem;
     }
 }
 @media (min-width:768px) {
@@ -1022,6 +1100,28 @@ nav ul li {
         flex-basis: 12.5%;
         max-width: 12.5%;
         box-sizing: border-box;
+    }
+    /* footer */
+    .topFooter {
+        padding: 0 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    .mainFooter {
+        padding: 0;
+        border: none;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footerLinks {
+        padding: 0;
+        width: 50%;
+    }
+    .footerCopyrightDiv {
+        width: 100%;
     }
 }   
 @media (min-width:1280px) {
