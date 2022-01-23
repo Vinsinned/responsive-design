@@ -482,16 +482,38 @@ nav ul li {
 }
 /* watch videos */
 .watchVideos {
-
+    padding: 7rem 0;
 }
 .watchHeading {
     font-family: 'Avalon Bold', sans-serif;
     margin-bottom: 3rem!important;
     font-size: 2.5rem!important;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.025rem;
 }
-.mainVideoContext {
-    
+.otherVideos {
+    display: block;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    width: 100%;
+    padding: 0;
+    width: calc(300px + 1.5rem);
+    max-height: 410px;
+    overflow: auto;
+}
+.otherVideo {
+    padding: .5rem;
+}
+.otherVideoImage {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+.otherVideoTitle {
+    font-family: 'HK Grotesk Bold', sans-serif;
+    padding-top: .5rem;
+    font-size: 0.875rem;
+    line-height: 1.75;
 }
 
 @media (max-width:767px) {
@@ -559,6 +581,75 @@ nav ul li {
     .newsletterHeading {
         font-size: 1.4rem;
     }
+    /* videos */
+    .watchVideos {
+        padding: 7rem 0;
+    }
+    .watchHeading {
+        margin-bottom: 3rem!important;
+        font-size: 2.5rem!important;
+        letter-spacing: -0.025rem;
+    }
+    .videos {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainVideo {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .mainVideoTitle {
+        font-family: 'Avalon Bold', sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+    .mainActualVideo {
+        width: 100%;
+        background-size: cover;
+        object-fit: cover;
+    }
+    .mainVideoContext {
+        padding: 1.5rem;
+        background-color: #000;
+        color: #fff;
+    }
+    .mainVideoTitle {
+        font-family: 'HK Grotesk Bold', sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.25;;
+        margin-bottom: 0.5rem;
+    }
+    .mainVideoViews {
+        font-family: 'HK Grotesk', sans-serif;
+        color: #a7aab2;
+        font-size: 0.85rem;
+    }
+    .otherVideos {
+        box-sizing: border-box;
+        padding: .5rem 1rem;
+        min-width: 100%;
+        max-height: 449px;
+        overflow: auto;
+        display: flex;
+    }
+    .otherVideo {
+        padding: 0.5rem;
+        height: 237px;
+        box-sizing: border-box;
+    }
+    .otherVideoImage {
+        width: 208px;
+        height: 117px;
+        background-size: cover;
+        object-fit: cover;
+    }
+    .otherVideoTitle {
+        font-family: 'HK Grotesk Bold', sans-serif;
+        padding-top: .5rem;
+        font-size: 0.925rem;
+        line-height: 1.75;
+    }
 }
 @media (min-width:768px) {
     .stories {
@@ -606,6 +697,53 @@ nav ul li {
     .newsletterHeading {
         font-size: 2rem;
     }
+    /* videos */
+    .watchVideos {
+        padding: 7rem 4rem;
+    }
+    .videos {
+        max-width: 100%;
+        display: flex;
+    }
+    .mainVideo {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .mainActualVideo {
+        background-size: cover;
+        object-fit: cover;
+        width: 100%;
+        height: calc(250px + 1.5rem)!important;
+    }
+    .mainVideoContext {
+        padding: 1.75rem 1.5rem;
+        background-color: #000;
+        color: #fff;
+    }
+    .mainVideoTitle {
+        font-family: 'Avalon Bold', sans-serif;
+        line-height: 1.75;
+        margin-bottom: 0.5rem;
+    }
+    .mainVideoViews {
+        color: #a7aab2;
+        font-size: 0.9rem;
+    }
+    .otherVideos {
+        padding: 0 0 1.5rem 1.5rem;
+        flex: 1 0 auto;
+        width: calc(250px + 1.5rem);
+    }
+    .otherVideo {
+        padding: 0;
+    }
+    .otherVideoImage {
+        height: 150px;
+        width: 100%;
+        background-size: cover;
+        object-fit: cover;
+    }
 }
 @media (min-width: 801px) {
     .stories {
@@ -643,6 +781,32 @@ nav ul li {
         grid-row: span 3;
         background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F01%2FSpotify-Hifi.jpg&signature=948317eefbed07b0fcebe7527beaa6ec');
     } 
+    /* videos */
+    .mainVideo {
+        width: 100%;
+    }
+    .mainActualVideo {
+        height: calc(300px + 1.5rem);
+    }
+    .otherVideos {
+        box-sizing: border-box;
+        min-width: 100%;
+        max-height: 410px;
+    }
+    .otherVideos {
+        min-height: 410px;
+    }
+    .otherVideo {
+        width: 100%;
+    }
+}
+@media (min-width:822px) {
+    .otherVideos {
+        box-sizing: border-box;
+        min-width: 100%;
+        min-height: 393px;
+        max-height: 393px;
+    }
 }
 @media (max-width:1025px) {
     .mainHeader {
@@ -702,6 +866,21 @@ nav ul li {
     /* explore channels */
     .newsletterHeading {
         font-size: 2rem;
+    }
+    /* videos */
+    .mainVideo {
+        width: 100%;
+    }
+    .mainActualVideo {
+        min-height: 502px;
+    }
+    .otherVideos {
+        box-sizing: border-box;
+        min-width: 100%;
+        max-height: 610px;
+    }
+    .otherVideo {
+        width: 100%;
     }
 }   
 @media (min-width:1280px) {
